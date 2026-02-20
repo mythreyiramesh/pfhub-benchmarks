@@ -1,0 +1,36 @@
+version: 1
+project:
+  title: Phase Field Community Hub
+  authors:
+    - name: The CHiMaD Phase-field Community
+  copyright: '2025'
+  github: mythreyiramesh/pfhub-benchmarks
+  bibliography:
+    - references.bib
+  exports:
+    - format: pdf
+      template: plain_latex_book
+      output: exports/book.pdf
+  toc:
+    - file: intro.md
+    - title: Benchmarks
+      children:
+        - pattern: benchmarks/*
+    - title: About
+      children:
+        - pattern: about/*
+    - title: External Links
+      children:
+        - url: https://pages.nist.gov/pf-recommended-practices
+          title: Recommended Practices
+        - url: https://github.com/usnistgov/pfhub/wiki
+          title: GitHub Wiki
+        - url: https://github.com/usnistgov/pfhub/graphs/contributors
+          title: PFHub Developers
+        - url: https://github.com/usnistgov/pfhub/blob/nist-pages/LICENSE.md
+          title: NIST License
+site:
+  options:
+    logo: pfhub-logo.jpg
+    folders: true
+  template: book-theme
